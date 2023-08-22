@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcdt5wad3dyi8"]
+
+[ext_resource type="Script" path="res://Base/CardCollision.gd" id="1_fdkui"]
+[ext_resource type="Texture2D" uid="uid://cdkv3cx0lbf8t" path="res://Content/images/void.tres" id="2_j2jfs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86ph8"]
+size = Vector2(65, 94)
+
+[node name="CardArea" type="Area2D"]
+script = ExtResource("1_fdkui")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_86ph8")
+
+[node name="hiddenmarker" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 0.313726, 0.541176, 0.611765)
+texture = ExtResource("2_j2jfs")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

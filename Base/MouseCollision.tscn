@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpuax27u1bujl"]
+
+[ext_resource type="Script" path="res://Base/MouseCollision.gd" id="1_fftug"]
+[ext_resource type="Texture2D" uid="uid://c7v0b6uvbo1qj" path="res://Content/glow.png" id="2_yritf"]
+[ext_resource type="Texture2D" uid="uid://co6kqcrmq640p" path="res://Content/images/borderGlowing.tres" id="3_8kwhb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ky7kg"]
+size = Vector2(64, 96)
+
+[node name="MouseCollision" type="Area2D"]
+monitoring = false
+monitorable = false
+script = ExtResource("1_fftug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ky7kg")
+debug_color = Color(0.894118, 0, 0, 0.419608)
+
+[node name="glow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = -65
+texture = ExtResource("2_yritf")
+
+[node name="borderGlowing" type="NinePatchRect" parent="."]
+visible = false
+z_index = 999
+offset_left = -32.0
+offset_top = -48.0
+offset_right = 32.0
+offset_bottom = 48.0
+texture = ExtResource("3_8kwhb")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

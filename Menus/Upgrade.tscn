@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://druw416pmtyqw"]
+
+[ext_resource type="Texture2D" path="res://Content/images/frame_hovered.tres" id="1_1x8fp"]
+[ext_resource type="Script" path="res://Menus/Settings.gd" id="2_xijgh"]
+[ext_resource type="PackedScene" uid="uid://d2ppmi54aae6w" path="res://Menus/CharacterUpgradeDeck.tscn" id="4_h06yo"]
+[ext_resource type="PackedScene" uid="uid://bcp6vn43irr6d" path="res://Base/UIButton.tscn" id="4_pknho"]
+
+[node name="Upgrade" type="NinePatchRect"]
+self_modulate = Color(0.733333, 1, 1, 1)
+anchors_preset = -1
+anchor_left = -0.0015625
+anchor_top = -0.197222
+anchor_right = -0.0015625
+anchor_bottom = -0.197222
+offset_left = 1.0
+offset_top = 71.0
+offset_right = 492.0
+offset_bottom = 321.0
+mouse_filter = 1
+texture = ExtResource("1_1x8fp")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+script = ExtResource("2_xijgh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Top" type="Label" parent="."]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 3.0
+offset_right = 237.0
+offset_bottom = 32.0
+text = "PERMANENT UPGRADES"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Close" parent="." instance=ExtResource("4_pknho")]
+self_modulate = Color(1, 0.760784, 0.631373, 1)
+layout_mode = 1
+anchor_left = 0.939
+anchor_right = 1.0
+anchor_bottom = 0.112
+offset_left = -0.0488586
+offset_right = 0.00164795
+offset_bottom = 0.0
+callednode = "parent"
+displaytext = "X"
+buttonfunction = "close"
+
+[node name="blondie" parent="." instance=ExtResource("4_h06yo")]
+layout_mode = 1
+anchor_left = 0.0319212
+anchor_top = 0.198
+anchor_right = 0.0319212
+anchor_bottom = 0.198215
+offset_left = 1.32668
+offset_top = 0.0219975
+offset_right = 112.327
+offset_bottom = 157.964
+
+[node name="barbara" parent="." instance=ExtResource("4_h06yo")]
+layout_mode = 1
+anchor_left = 0.26758
+anchor_top = 0.198
+anchor_right = 0.26758
+anchor_bottom = 0.198215
+offset_left = 0.618454
+offset_top = 0.0219975
+offset_right = 111.618
+offset_bottom = 157.964
+characterid = "barbara"
+
+[node name="vi" parent="." instance=ExtResource("4_h06yo")]
+layout_mode = 1
+anchor_left = 0.503832
+anchor_top = 0.198
+anchor_right = 0.503832
+anchor_bottom = 0.198215
+offset_left = -0.381531
+offset_top = 0.0219975
+offset_right = 110.618
+offset_bottom = 157.964
+characterid = "vi"
+
+[node name="yari" parent="." instance=ExtResource("4_h06yo")]
+layout_mode = 1
+anchor_left = 0.587335
+anchor_top = 0.198
+anchor_right = 0.587335
+anchor_bottom = 0.198215
+offset_left = 73.6185
+offset_top = 0.0219975
+offset_right = 184.618
+offset_bottom = 157.964
+characterid = "yari"

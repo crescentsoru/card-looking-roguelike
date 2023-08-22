@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://bygmi04vybdtv"]
+
+[ext_resource type="Script" path="res://Menus/MainMenu.gd" id="1_vct1n"]
+[ext_resource type="Texture2D" uid="uid://dnxiitx5wa25y" path="res://Content/images/frame_hovered.tres" id="2_vny80"]
+[ext_resource type="PackedScene" uid="uid://bcp6vn43irr6d" path="res://Base/UIButton.tscn" id="3_8m76a"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_vct1n")
+
+[node name="Main menu" type="NinePatchRect" parent="."]
+offset_left = 240.0
+offset_right = 640.0
+offset_bottom = 329.0
+texture = ExtResource("2_vny80")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="."]
+offset_left = 382.0
+offset_top = 9.0
+offset_right = 502.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 16
+text = "CARD DUNGEON"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="newgame_button" parent="." instance=ExtResource("3_8m76a")]
+self_modulate = Color(1, 0.486275, 1, 1)
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 510.0
+offset_top = 166.0
+offset_right = 623.0
+offset_bottom = 208.0
+callednode = "parent"
+displaytext = "New Run"
+buttonfunction = "open_selectcharacter"
+
+[node name="newgame_button4" parent="." instance=ExtResource("3_8m76a")]
+self_modulate = Color(1, 0.486275, 1, 1)
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 510.0
+offset_top = 235.0
+offset_right = 623.0
+offset_bottom = 277.0
+callednode = "parent"
+displaytext = "Exit"
+buttonfunction = "exit"
+
+[node name="newgame_button2" parent="." instance=ExtResource("3_8m76a")]
+self_modulate = Color(1, 0.486275, 1, 1)
+anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 510.0
+offset_top = 103.0
+offset_right = 623.0
+offset_bottom = 145.0
+callednode = "parent"
+displaytext = "Continue"
+buttonfunction = "continuegame"
+
+[node name="button_settings" parent="." instance=ExtResource("3_8m76a")]
+self_modulate = Color(1, 0.784314, 0.552941, 1)
+anchor_left = 109.8
+anchor_top = 25.6
+anchor_right = 125.087
+anchor_bottom = 32.2288
+offset_left = 0.0
+offset_top = 321.0
+offset_right = 52.0
+offset_bottom = 361.0
+callednode = "parent"
+displaytext = "Settings"
+buttonfunction = "open_settings"
+
+[node name="button_upgrades" parent="." instance=ExtResource("3_8m76a")]
+self_modulate = Color(1, 0.784314, 0.552941, 1)
+anchor_left = 109.8
+anchor_top = 25.6
+anchor_right = 125.087
+anchor_bottom = 32.2288
+offset_left = 0.0
+offset_top = 262.0
+offset_right = 52.0
+offset_bottom = 302.0
+callednode = "parent"
+displaytext = "Upgrade"
+buttonfunction = "open_upgrade"

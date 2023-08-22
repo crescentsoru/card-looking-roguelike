@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmge2207hyxrj"]
+
+[ext_resource type="Texture2D" uid="uid://cg2isvp5cmpg5" path="res://Content/images/Axe.tres" id="1_j50fc"]
+[ext_resource type="Script" path="res://Content/Scenes/weapontoss.gd" id="2_0drlx"]
+
+[node name="weapontoss" type="Sprite2D"]
+texture = ExtResource("1_j50fc")
+region_rect = Rect2(64, 0, 32, 64)
+script = ExtResource("2_0drlx")

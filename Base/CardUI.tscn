@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4yhaau1qd3os"]
+
+[ext_resource type="Script" path="res://Base/CardUI.gd" id="1_2piov"]
+[ext_resource type="Texture2D" uid="uid://pfpp3y3vqi2b" path="res://Content/images/card.tres" id="3_fv3of"]
+
+[node name="card" type="Node2D"]
+script = ExtResource("1_2piov")
+
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("3_fv3of")
+
+[node name="health" type="Label" parent="Visual"]
+offset_left = -29.0
+offset_top = -44.0
+offset_right = -19.0
+offset_bottom = -33.0
+theme_override_colors/font_color = Color(0.67451, 0.196078, 0.196078, 1)
+text = "98"
+metadata/_edit_use_anchors_ = true
+
+[node name="attack" type="Label" parent="Visual"]
+offset_left = 20.0
+offset_top = -44.0
+offset_right = 30.0
+offset_bottom = -33.0
+theme_override_colors/font_color = Color(0.596078, 0.686275, 0.72549, 1)
+text = "98"
+metadata/_edit_use_anchors_ = true
+
+[node name="name" type="Label" parent="Visual"]
+offset_left = -32.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0.596078, 0.686275, 0.72549, 1)
+text = "-
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="image" type="Sprite2D" parent="Visual"]
+region_rect = Rect2(64, 0, 32, 64)

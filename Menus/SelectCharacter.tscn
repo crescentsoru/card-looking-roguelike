@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfqeeopeel0e4"]
+
+[ext_resource type="Texture2D" path="res://Content/images/frame_hovered.tres" id="1_s7p8n"]
+[ext_resource type="Script" path="res://Menus/SelectCharacter.gd" id="2_78qah"]
+[ext_resource type="PackedScene" uid="uid://bcp6vn43irr6d" path="res://Base/UIButton.tscn" id="3_apn4a"]
+[ext_resource type="PackedScene" uid="uid://dqnyftdh6u28i" path="res://Menus/SelectCharacterTab.tscn" id="3_apx15"]
+
+[node name="Select" type="NinePatchRect"]
+self_modulate = Color(0.752941, 0.745098, 0.74902, 1)
+anchors_preset = -1
+anchor_left = -0.0015625
+anchor_right = -0.0015625
+offset_left = 1.0
+offset_right = 492.0
+offset_bottom = 250.0
+mouse_filter = 1
+texture = ExtResource("1_s7p8n")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+script = ExtResource("2_78qah")
+metadata/_edit_use_anchors_ = true
+
+[node name="Top" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.101833
+anchor_top = 0.00369004
+anchor_right = 0.101833
+anchor_bottom = 0.00369004
+offset_left = 117.0
+offset_top = 3.0
+offset_right = 237.0
+offset_bottom = 32.0
+text = "SELECT CHARACTER"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Close" parent="." instance=ExtResource("3_apn4a")]
+self_modulate = Color(1, 0.760784, 0.631373, 1)
+layout_mode = 1
+anchor_left = 0.936491
+anchor_right = 0.936491
+anchor_bottom = 0.0
+offset_left = 1.55072
+offset_right = 31.5507
+offset_bottom = 28.0
+callednode = "parent"
+displaytext = "X"
+buttonfunction = "close"
+
+[node name="SelectCharacterTab" parent="." instance=ExtResource("3_apx15")]
+layout_mode = 1
+anchor_left = 0.0224033
+anchor_top = 0.143882
+anchor_right = 0.0224033
+anchor_bottom = 0.143882
+offset_right = 100.0
+offset_bottom = 210.0
+
+[node name="SelectCharacterTab2" parent="." instance=ExtResource("3_apx15")]
+layout_mode = 1
+anchor_left = 0.272912
+anchor_top = 0.143882
+anchor_right = 0.272912
+anchor_bottom = 0.143882
+offset_right = 100.0
+offset_bottom = 210.0
+characterid = "barbara"
+
+[node name="SelectCharacterTab3" parent="." instance=ExtResource("3_apx15")]
+layout_mode = 1
+anchor_left = 0.517312
+anchor_top = 0.143882
+anchor_right = 0.517312
+anchor_bottom = 0.143882
+offset_right = 100.0
+offset_bottom = 210.0
+characterid = "vi"
+
+[node name="SelectCharacterTab4" parent="." instance=ExtResource("3_apx15")]
+layout_mode = 1
+anchor_left = 0.767821
+anchor_top = 0.143882
+anchor_right = 0.767821
+anchor_bottom = 0.143882
+offset_right = 100.0
+offset_bottom = 210.0
+characterid = "yari"

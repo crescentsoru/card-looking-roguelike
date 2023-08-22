@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://ghbgse78ajr"]
+
+[ext_resource type="Texture2D" path="res://Content/images/frame_hovered.tres" id="1_rxbri"]
+[ext_resource type="Script" path="res://Menus/Settings.gd" id="2_1sv2e"]
+[ext_resource type="PackedScene" uid="uid://bcp6vn43irr6d" path="res://Base/UIButton.tscn" id="3_uqp1l"]
+[ext_resource type="Texture2D" uid="uid://cewinacx8ob3s" path="res://Content/UI/button_close.tres" id="4_uaeyc"]
+
+[node name="GameplaySettings" type="NinePatchRect"]
+self_modulate = Color(0.580392, 0.607843, 0.576471, 1)
+anchors_preset = -1
+anchor_left = -0.0015625
+anchor_right = -0.0015625
+offset_left = 1.0
+offset_right = 492.0
+offset_bottom = 250.0
+mouse_filter = 1
+texture = ExtResource("1_rxbri")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+script = ExtResource("2_1sv2e")
+metadata/_edit_use_anchors_ = true
+
+[node name="Top" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.33788
+anchor_top = 0.013
+anchor_right = 0.63388
+anchor_bottom = 0.14
+offset_left = -0.0449982
+offset_top = 0.023
+offset_right = 0.0749817
+offset_bottom = -0.0600014
+text = "GAMEPLAY SETTINGS"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="wipesave" parent="." instance=ExtResource("3_uqp1l")]
+self_modulate = Color(1, 0.760784, 0.631373, 1)
+layout_mode = 1
+anchor_left = -9.71097
+anchor_top = 1.58586
+anchor_right = -9.17771
+anchor_bottom = 1.69476
+offset_left = 4989.08
+offset_top = -179.464
+offset_right = 4993.25
+offset_bottom = -178.689
+callednode = "parent"
+displaytext = "Wipe game save"
+buttonfunction = "wipe_firstclick"
+
+[node name="Close" parent="." instance=ExtResource("3_uqp1l")]
+self_modulate = Color(1, 0.760784, 0.631373, 1)
+layout_mode = 1
+anchor_left = 0.940257
+anchor_right = 1.0
+anchor_bottom = 0.103
+offset_left = -0.666016
+offset_right = 0.0
+offset_bottom = 2.25
+callednode = "parent"
+displaytext = " "
+buttonfunction = "close"
+
+[node name="ButtonClose" type="Sprite2D" parent="."]
+position = Vector2(476, 14)
+texture = ExtResource("4_uaeyc")

@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cnycw71t5v1rs"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_sex3p"]
+
+[resource]
+atlas = SubResource("ImageTexture_sex3p")
+region = Rect2(224, 0, 32, 32)

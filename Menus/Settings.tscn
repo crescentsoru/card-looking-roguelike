@@ -1,0 +1,261 @@
+[gd_scene load_steps=5 format=3 uid="uid://b67jrvhdhj21y"]
+
+[ext_resource type="Texture2D" path="res://Content/images/frame_hovered.tres" id="1_rx22v"]
+[ext_resource type="Script" path="res://Menus/Settings.gd" id="2_4dqyd"]
+[ext_resource type="Texture2D" uid="uid://co6kqcrmq640p" path="res://Content/images/borderGlowing.tres" id="2_8ylet"]
+[ext_resource type="PackedScene" uid="uid://bcp6vn43irr6d" path="res://Base/UIButton.tscn" id="2_cv1c0"]
+
+[node name="Settings" type="NinePatchRect"]
+self_modulate = Color(1, 1, 0.815686, 1)
+anchors_preset = -1
+anchor_left = -0.0015625
+anchor_right = -0.0015625
+offset_left = 1.0
+offset_right = 357.0
+offset_bottom = 193.0
+mouse_filter = 1
+texture = ExtResource("1_rx22v")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+script = ExtResource("2_4dqyd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Top" type="Label" parent="."]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 3.0
+offset_right = 237.0
+offset_bottom = 32.0
+text = "SETTINGS"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="setting1" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.161
+anchor_right = 0.14
+anchor_bottom = 0.238
+offset_left = 0.0159998
+offset_top = -0.0730019
+offset_right = 0.16
+offset_bottom = 0.0659981
+text = "MASTER
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="settingborder1" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 0.403922, 0.592157, 1)
+z_index = 999
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.124
+anchor_right = 0.618
+anchor_bottom = 0.249
+offset_left = 2.0
+offset_top = 0.0679989
+offset_right = -0.00801086
+offset_bottom = -0.057003
+texture = ExtResource("2_8ylet")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="mixMaster" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14
+anchor_top = 0.13
+anchor_right = 0.14
+anchor_bottom = 0.13
+offset_left = 0.16
+offset_top = -0.0900021
+offset_right = 162.16
+offset_bottom = 22.91
+value = 1.0
+rounded = true
+metadata/_edit_use_anchors_ = true
+
+[node name="setting2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.316
+anchor_right = 0.14
+anchor_bottom = 0.394
+offset_left = 0.0159998
+offset_top = 0.0119972
+offset_right = 0.16
+offset_bottom = -0.0420074
+text = "MUSIC
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="settingborder2" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 0.403922, 0.592157, 1)
+z_index = 999
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0051236
+anchor_top = 0.28
+anchor_right = 0.618
+anchor_bottom = 0.404
+offset_left = 0.175999
+offset_top = -0.0400009
+offset_right = -0.00801086
+offset_bottom = 0.0279999
+texture = ExtResource("2_8ylet")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="mixMusic" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14
+anchor_top = 0.285
+anchor_right = 0.14
+anchor_bottom = 0.285
+offset_left = 0.16
+offset_top = -0.00500488
+offset_right = 162.16
+offset_bottom = 22.995
+value = 1.0
+rounded = true
+metadata/_edit_use_anchors_ = true
+
+[node name="setting3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.477
+anchor_right = 0.132
+anchor_bottom = 0.539
+offset_left = 0.0159998
+offset_top = -0.0610046
+offset_right = 3.008
+offset_bottom = 11.973
+text = "SOUND
+
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="settingborder3" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 0.403922, 0.592157, 1)
+z_index = 999
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.435
+anchor_right = 0.618
+anchor_bottom = 0.565
+offset_left = -0.136
+offset_top = 0.0449905
+offset_right = -0.00801086
+offset_bottom = -0.0449982
+texture = ExtResource("2_8ylet")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="mixSound" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14
+anchor_top = 0.446
+anchor_right = 0.14
+anchor_bottom = 0.446
+offset_left = 0.16
+offset_top = -0.0780029
+offset_right = 162.16
+offset_bottom = 22.922
+value = 1.0
+rounded = true
+metadata/_edit_use_anchors_ = true
+
+[node name="setting4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 127.0
+offset_right = 57.0
+offset_bottom = 141.0
+text = "FULLSCREEN
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="settingborder4" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 0.403922, 0.592157, 1)
+z_index = 999
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0051236
+anchor_top = 0.103275
+anchor_right = 0.533213
+anchor_bottom = 0.103275
+offset_left = 0.175999
+offset_top = 96.068
+offset_right = -36.824
+offset_bottom = 126.068
+texture = ExtResource("2_8ylet")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Close" parent="." instance=ExtResource("2_cv1c0")]
+self_modulate = Color(1, 0.760784, 0.631373, 1)
+layout_mode = 1
+anchor_left = 0.910112
+anchor_right = 1.00618
+anchor_bottom = 0.144456
+offset_right = -2.20001
+callednode = "parent"
+displaytext = "X"
+buttonfunction = "close"
+
+[node name="Fullscreen" parent="." instance=ExtResource("2_cv1c0")]
+self_modulate = Color(1, 0.760784, 0.631373, 1)
+layout_mode = 1
+anchor_left = 0.191011
+anchor_top = 0.621762
+anchor_right = 0.275843
+anchor_bottom = 0.73513
+callednode = "parent"
+displaytext = "+"
+buttonfunction = "fullscreen"
+
+[node name="ToMainMenu" parent="." instance=ExtResource("2_cv1c0")]
+self_modulate = Color(1, 0.760784, 0.631373, 1)
+layout_mode = 1
+anchor_left = 0.691011
+anchor_top = 0.84456
+anchor_right = 0.972472
+anchor_bottom = 0.957927
+callednode = "parent"
+displaytext = "Save & Quit"
+buttonfunction = "goto_main_menu"
+
+[node name="wipesave" parent="." instance=ExtResource("2_cv1c0")]
+self_modulate = Color(1, 0.760784, 0.631373, 1)
+layout_mode = 1
+anchor_left = -9.70254
+anchor_top = 2.43042
+anchor_right = -9.1131
+anchor_bottom = 2.53932
+offset_left = 3457.11
+offset_top = -306.071
+offset_right = 3462.26
+offset_bottom = -305.089
+callednode = "parent"
+displaytext = "Wipe game save"
+buttonfunction = "wipe_firstclick"

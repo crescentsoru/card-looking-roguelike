@@ -1,0 +1,103 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqnyftdh6u28i"]
+
+[ext_resource type="Texture2D" uid="uid://co6kqcrmq640p" path="res://Content/images/borderGlowing.tres" id="1_jhivr"]
+[ext_resource type="Script" path="res://Menus/SelectCharacterTab.gd" id="2_7yxj5"]
+[ext_resource type="Texture2D" uid="uid://dhcnx660wdwjj" path="res://Content/images/blondie.tres" id="2_r8u17"]
+[ext_resource type="PackedScene" uid="uid://bcp6vn43irr6d" path="res://Base/UIButton.tscn" id="3_oso5v"]
+
+[node name="SelectCharacterTab" type="NinePatchRect"]
+self_modulate = Color(0.886275, 0.662745, 0.203922, 1)
+z_index = 999
+anchors_preset = -1
+anchor_top = -0.0416667
+anchor_right = 0.0046875
+anchor_bottom = -0.0416667
+offset_right = 116.0
+offset_bottom = 218.0
+texture = ExtResource("1_jhivr")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+script = ExtResource("2_7yxj5")
+metadata/_edit_use_anchors_ = true
+
+[node name="portrait" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.399
+anchor_top = 0.0215123
+anchor_right = 0.608
+anchor_bottom = 0.386512
+offset_left = -7.284
+offset_top = -6.075
+offset_right = 0.472
+offset_bottom = -5.95
+texture = ExtResource("2_r8u17")
+stretch_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="goldamount" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.984
+anchor_top = 0.903
+anchor_right = 0.984
+anchor_bottom = 0.971
+offset_left = -41.936
+offset_top = -0.0250092
+offset_right = 0.0639954
+offset_bottom = 0.0749817
+theme_override_colors/font_color = Color(0.988235, 0.854902, 0, 1)
+text = "XXXX gold
+"
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="hp_amount" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 143.0
+offset_right = 44.0
+offset_bottom = 155.0
+text = "XX HP"
+metadata/_edit_use_anchors_ = true
+
+[node name="atk_amount" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 4.0
+offset_top = 158.0
+offset_right = 44.0
+offset_bottom = 170.0
+text = "XX ATK"
+metadata/_edit_use_anchors_ = true
+
+[node name="select_button" parent="." instance=ExtResource("3_oso5v")]
+self_modulate = Color(0.831373, 0.796078, 1, 1)
+layout_mode = 1
+anchor_left = 0.164387
+anchor_top = 0.337127
+anchor_right = 0.768387
+anchor_bottom = 0.465443
+offset_left = -0.562002
+offset_top = -0.937088
+offset_right = -2.438
+offset_bottom = 1.01472
+callednode = "parent"
+displaytext = "brobbaabra"
+buttonfunction = "select"
+
+[node name="description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 105.0
+offset_right = 101.0
+offset_bottom = 210.0
+text = "Description:
++ SDJHKGvl
++ghjksafdlg fdgsdfkgyujkl io"
+autowrap_mode = 2
+clip_text = true

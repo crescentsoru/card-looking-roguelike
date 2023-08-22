@@ -1,0 +1,92 @@
+[gd_scene load_steps=3 format=3 uid="uid://bql6ir2v3loqk"]
+
+[ext_resource type="Script" path="res://Menus/Credits.gd" id="1_w0lw1"]
+[ext_resource type="Texture2D" uid="uid://dfxwkwo1847a7" path="res://Content/images/Cake.tres" id="2_cf8fh"]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_w0lw1")
+
+[node name="CreditsText" type="Label" parent="."]
+offset_top = 372.0
+offset_right = 644.0
+offset_bottom = 694.0
+theme_override_colors/font_color = Color(0.886275, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "CONGLATURATION !!!
+YOU HAVE COMPLETED A GAME.
+AND PROOVED THE JUSTICE OF OUR CULTURE.
+YOUR STRONGTH WELLING AND COURAGEOUR MAKE TRUE PEACE IN THE WORLD !!
+
+
+Card Looking Roguelike
+
+"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="CreditsText2" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 700.0
+offset_right = 655.0
+offset_bottom = 1065.0
+theme_override_colors/font_color = Color(0.886275, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Programming               crescentsoru
+
+Level Design              crescentsoru
+
+Music                      crescentsoru
+
+Font & Game Design       Kia Azad
+
+Sounds taken from freesound.org
+
+Art taken from Dungeon Crawl Stone Soup
+
+"
+autowrap_mode = 1
+
+[node name="CreditsText3" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 1045.0
+offset_right = 658.0
+offset_bottom = 2109.0
+theme_override_colors/font_color = Color(0.886275, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Directing                   Neil Breen
+
+Casting                     Neil Breen
+
+Administration             Neil Breen
+
+Craft Services             Neil Breen
+
+Research                   Done
+
+Location                    Neil Breen
+
+Visionary                   Neil Breen
+
+Catering                   crescentsoru
+
+Production Designer       Neil Breen
+
+Sound Design              Neil Breen
+
+Lighting                    None
+
+Camera Operator           Neil Breen
+
+Laptops                    Broken
+
+Wardrobe                   Others
+
+Public Relations           Neil Breen
+
+Moral Support             Neil Breen
+"
+autowrap_mode = 1
+
+[node name="Cake" type="Sprite2D" parent="."]
+position = Vector2(-41, 1873)
+texture = ExtResource("2_cf8fh")

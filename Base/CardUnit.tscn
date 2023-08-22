@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://dx1ex4mow0i82"]
+
+[ext_resource type="Script" path="res://Base/CardUnit.gd" id="1_3bdic"]
+[ext_resource type="Texture2D" uid="uid://pfpp3y3vqi2b" path="res://Content/images/card.tres" id="2_3ogkf"]
+[ext_resource type="Texture2D" uid="uid://du4bl2toxuxax" path="res://Content/images/PunchRat.tres" id="3_cls48"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8sap"]
+size = Vector2(65, 94)
+
+[node name="card" type="Node2D"]
+script = ExtResource("1_3bdic")
+
+[node name="CardArea" type="Area2D" parent="."]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardArea"]
+shape = SubResource("RectangleShape2D_m8sap")
+disabled = true
+
+[node name="Visual" type="Sprite2D" parent="."]
+texture = ExtResource("2_3ogkf")
+
+[node name="health" type="Label" parent="Visual"]
+offset_left = -29.0
+offset_top = -44.0
+offset_right = -19.0
+offset_bottom = -33.0
+theme_override_colors/font_color = Color(0.67451, 0.196078, 0.196078, 1)
+text = "98"
+metadata/_edit_use_anchors_ = true
+
+[node name="attack" type="Label" parent="Visual"]
+offset_left = 20.0
+offset_top = -44.0
+offset_right = 30.0
+offset_bottom = -33.0
+theme_override_colors/font_color = Color(0.596078, 0.686275, 0.72549, 1)
+text = "98"
+metadata/_edit_use_anchors_ = true
+
+[node name="name" type="Label" parent="Visual"]
+offset_left = -32.0
+offset_top = 35.0
+offset_right = 32.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0.596078, 0.686275, 0.72549, 1)
+text = "Blondie"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="level" type="Label" parent="Visual"]
+offset_left = -32.0
+offset_top = 20.0
+offset_right = 32.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.698039, 0.505882, 0.980392, 1)
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="image" type="Sprite2D" parent="Visual"]
+texture = ExtResource("3_cls48")
+region_rect = Rect2(64, 0, 32, 64)
