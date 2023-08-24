@@ -1622,7 +1622,7 @@ func brush_display_update():
 		$CanvasLayer/EditorUI/CardUI.update_visuals_unit(brush_units[brushunit_select])
 
 	#SAVING/LOADING LEVELS
-var currentlevel = "test" #both saving and loading
+var currentlevel = "Start" #both saving and loading
 
 
 func save_current_level():

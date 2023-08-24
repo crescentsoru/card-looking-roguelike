@@ -19,12 +19,13 @@ patch_margin_bottom = 8
 metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="Label" parent="."]
-offset_left = 382.0
+offset_left = 338.0
 offset_top = 9.0
-offset_right = 502.0
+offset_right = 550.0
 offset_bottom = 38.0
 theme_override_font_sizes/font_size = 16
-text = "CARD DUNGEON"
+text = "CARD LOOKING ROGUELIKE
+"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
